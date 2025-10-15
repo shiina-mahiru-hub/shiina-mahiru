@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chúc mừng Ngày Phụ nữ Việt Nam 20/10</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fff7fb;
+      --accent:#e75480;
+      --accent-dark:#c03f67;
+      --card:#fff;
+      --muted:#6b6b6b;
+      --gold:#ffcf5c;
+      --heart:#ff6ea6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(circle at 10% 10%, #fff0f4 0%, var(--bg) 25%, #f9f6ff 100%);
+      color:#222;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:1100px;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .hero{
+      background: linear-gradient(180deg, rgba(231,84,128,0.06), rgba(240,240,255,0.02));
+      padding:36px;
+      border-radius:18px;
+      box-shadow: 0 10px 30px rgba(120,80,120,0.08);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      position:relative;
+      overflow:visible;
+    }
+
+    .logo{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .logo .dot{
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:Playfair Display;
+      box-shadow:0 6px 18px rgba(199,60,100,0.18);
+      transform:rotate(-10deg);
+    }
+    .logo span{font-weight:600;color:var(--muted)}
+
+    h1{
+      margin:6px 0 14px;
+      font-family:'Playfair Display';
+      font-size:48px;
+      line-height:1.02;
+      color:var(--accent-dark);
+      text-shadow: 0 4px 18px rgba(199,60,100,0.06);
+      display:flex;align-items:center;gap:12px;
+    }
+    .sub{
+      color:#3b3b3b;
+      font-size:18px;
+      margin-bottom:20px;
+    }
+
+    .heart {
+      width:36px;height:36px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:linear-gradient(180deg,var(--heart),var(--accent));
+      color:white;border-radius:9px;
+      box-shadow:0 8px 18px rgba(231,84,128,0.12);
+      transform:rotate(-12deg);
+    }
+
+    .flowers{
+      display:flex;
+      gap:12px;
+      margin:14px 0 22px;
+      flex-wrap:wrap;
+    }
+
+    .flower{
+      width:68px;height:68px;border-radius:12px;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0.35) 10%);
+      display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(200,80,120,0.08);
+      position:relative; overflow:visible;
+    }
+
+    .petal{
+      position:absolute;
+      width:36px;height:36px;border-radius:50%;
+      background:linear-gradient(180deg,var(--gold),#ffd86b);
+      transform-origin:center;
+      top:16px; left:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+    .petal.p1{ transform:translate(-10px,-18px); }
+    .petal.p2{ transform:translate(18px,-8px); }
+    .petal.p3{ transform:translate(18px,12px); }
+    .petal.p4{ transform:translate(-10px,28px); }
+    .center{
+      width:18px;height:18px;background:var(--accent-dark);border-radius:50%;position:relative;z-index:2;
+      box-shadow:0 4px 10px rgba(199,60,100,0.16);
+    }
+
+    .desc{
+      font-size:15px;color:var(--muted);margin-bottom:20px;
+    }
+
+    .btns{
+      display:flex;gap:12px;flex-wrap:wrap;
+    }
+    .btn{
+      padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:600;
+      box-shadow: 0 6px 16px rgba(120,80,120,0.06);
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn.primary{
+      background:linear-gradient(90deg,var(--accent),var(--accent-dark));color:white;
+    }
+    .btn.ghost{
+      background:transparent;border:2px solid rgba(199,60,100,0.08);color:var(--accent-dark);
+    }
+
+    .panel{
+      background:linear-gradient(180deg,#ffffff, #fff);
+      border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;
+      box-shadow: 0 10px 30px rgba(80,60,80,0.04);
+      align-items:center;
+    }
+    .card{
+      width:100%;
+      max-width:360px;
+      aspect-ratio:4/5;
+      border-radius:16px;
+      background:linear-gradient(180deg,#fff, #fff9fb);
+      padding:22px;
+      box-shadow: 0 8px 22px rgba(199,60,100,0.06);
+      display:flex;flex-direction:column;justify-content:space-between;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card h2{
+      margin:0;font-family:'Playfair Display';font-size:26px;color:var(--accent-dark);
+      display:flex;align-items:center;gap:8px;
+    }
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .signature{text-align:right;font-size:13px;color:var(--muted)}
+    .tofrom{text-align:center;font-size:14px;color:var(--muted);margin-top:6px}
+
+    .confetti {
+      position:absolute; inset:0; pointer-events:none;
+    }
+
+    input[type="text"], textarea{
+      width:100%;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(120,120,120,0.08);
+      font-size:14px;
+      margin-top:8px;
+      resize:vertical;
+      font-family:inherit;
+    }
+
+    label.small{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+
+    @media (max-width:920px){
+      .wrap{grid-template-columns:1fr; max-width:720px}
+      .card{margin:0 auto}
+      h1{font-size:40px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="logo">
+        <div class="dot">20</div>
+        <span>20/10 — Ngày Phụ nữ Việt Nam</span>
+      </div>
+
+      <h1><span class="heart">❤</span> Chúc mừng Ngày Phụ nữ Việt Nam 20/10</h1>
+      <div class="sub">Dành tặng những đóa hoa xinh đẹp nhất cho một nửa ngọt ngào của thế giới 🌸</div>
+
+      <div class="flowers">
+        <div class="flower">
+          <div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div><div class="center"></div>
+        </div>
+        <div class="flower" style="background:linear-gradient(180deg,#fff9f0,#fff7fb);">
+          <div class="petal p1" style="background:linear-gradient(180deg,#ffe2d9,#ffb8a8)"></div>
+          <div class="petal p2" style="background:linear-gradient(180deg,#ffe2d9,#ffb8a8)"></div>
+          <div class="petal p3" style="background:linear-gradient(180deg,#ffe2d9,#ffb8a8)"></div>
+          <div class="petal p4" style="background:linear-gradient(180deg,#ffe2d9,#ffb8a8)"></div>
+          <div class="center" style="background:var(--accent)"></div>
+        </div>
+      </div>
+
+      <div class="desc">
+        Một chút ngọt ngào, một chút sến súa – vì hôm nay là ngày dành riêng cho phái đẹp 💖
+      </div>
+
+      <div style="margin-bottom:6px">
+        <label for="message" style="display:block;font-size:13px;color:var(--muted);margin-bottom:6px">Lời chúc của bạn</label>
+        <textarea id="message" rows="3">Chúc cậu có một ngày 20/10 thật vui và nhiều niềm vui nhỏ bé đáng nhớ nhé 🌸</textarea>
+
+        <label class="small" for="toInput">Người nhận</label>
+        <input type="text" id="toInput" placeholder="Tên người nhận (để trống nếu muốn tự nhập sau)">
+
+        <label class="small" for="fromInput">Người gửi</label>
+        <input type="text" id="fromInput" placeholder="Tên người gửi (ví dụ: Thành)">
+      </div>
+
+      <div class="btns">
+        <button class="btn primary" id="downloadBtn">Tải về thiệp (PNG)</button>
+        <button class="btn ghost" id="randomBtn">Lời chúc khác 💞</button>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <div class="card" id="card">
+        <div style="display:flex;gap:12px;align-items:center;">
+          <svg width="56" height="56" viewBox="0 0 24 24">
+            <path fill="url(#g1)" d="M12 2C10 6 4 7 4 11c0 5 8 11 8 11s8-6 8-11c0-4-6-5-8-9z"/>
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffb3c6"/><stop offset="1" stop-color="#e75480"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <div style="font-size:12px;color:var(--muted)">20/10 • Ngày Phụ nữ Việt Nam</div>
+            <div style="font-weight:700;font-size:18px;color:var(--accent-dark)">Dành tặng người đặc biệt 💌</div>
+          </div>
+        </div>
+
+        <div class="greeting" style="margin-top:6px">
+          <h2 id="cardTitle">Chúc mừng 20/10 <span style="color:var(--heart)">❤</span></h2>
+          <p id="cardMessage">Chúc cậu có một ngày 20/10 thật vui và nhiều niềm vui nhỏ bé đáng nhớ nhé 🌸</p>
+        </div>
+
+        <div class="tofrom">
+          Gửi đến: <strong id="toName">Người nhận</strong><br>
+          — từ <strong id="fromName">Người gửi</strong>
+        </div>
+
+        <canvas class="confetti" id="confettiCanvas"></canvas>
+      </div>
+
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+        <button class="btn" id="printBtn">In / Print</button>
+        <button class="btn" id="downloadCardSmall">Tải PNG (nhỏ)</button>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const messageEl = document.getElementById('message');
+    const cardMessage = document.getElementById('cardMessage');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const randomBtn = document.getElementById('randomBtn');
+    const printBtn = document.getElementById('printBtn');
+    const downloadCardSmall = document.getElementById('downloadCardSmall');
+    const card = document.getElementById('card');
+    const fromNameEl = document.getElementById('fromName');
+    const toNameEl = document.getElementById('toName');
+    const toInput = document.getElementById('toInput');
+    const fromInput = document.getElementById('fromInput');
+
+    // 5 câu chúc (theo yêu cầu)
+    const wishes = [
+      "Chúc cậu có một ngày 20/10 thật vui và nhiều niềm vui nhỏ bé đáng nhớ nhé 🌸",
+      "Hy vọng hôm nay cậu sẽ được nhận thật nhiều lời chúc tốt đẹp từ mọi người.",
+      "Cảm ơn cậu vì luôn là một người dễ thương và mang lại năng lượng tích cực cho xung quanh.",
+      "Chúc cậu luôn tự tin, luôn mỉm cười và gặp nhiều may mắn trong mọi chuyện.",
+      "Ngày hôm nay là của cậu, nên hãy nghỉ ngơi một chút và làm điều khiến cậu thấy vui nha ☀️"
+    ];
+
+    // cập nhật card khi textarea thay đổi
+    messageEl.addEventListener('input', e => {
+      cardMessage.textContent = e.target.value.trim() || wishes[0];
+    });
+
+    // localStorage keys
+    const LS_TO = 'thiep_friend_to';
+    const LS_FROM = 'thiep_friend_from';
+
+    function loadNames() {
+      const savedTo = localStorage.getItem(LS_TO);
+      const savedFrom = localStorage.getItem(LS_FROM);
+      if (savedTo) {
+        toInput.value = savedTo;
+        toNameEl.textContent = savedTo;
+      }
+      if (savedFrom) {
+        fromInput.value = savedFrom;
+        fromNameEl.textContent = savedFrom;
+      }
+    }
+
+    function saveToName(v){
+      localStorage.setItem(LS_TO, v);
+      toNameEl.textContent = v || 'Người nhận';
+    }
+    function saveFromName(v){
+      localStorage.setItem(LS_FROM, v);
+      fromNameEl.textContent = v || 'Người gửi';
+    }
+
+    toInput.addEventListener('input', e => saveToName(e.target.value.trim()));
+    fromInput.addEventListener('input', e => saveFromName(e.target.value.trim()));
+
+    // random wish
+    randomBtn.addEventListener('click', () => {
+      const pick = wishes[Math.floor(Math.random() * wishes.length)];
+      messageEl.value = pick;
+      messageEl.dispatchEvent(new Event('input'));
+    });
+
+    // download card logic (serialize SVG -> PNG)
+    function downloadCard(scale = 2, filename = 'thiep-20-10-cho-ban.png') {
+      const cardNode = card.cloneNode(true);
+      const conf = cardNode.querySelector('.confetti');
+      if(conf) conf.remove(); // remove canvas from cloned node
+      const serialized = `
+        <svg xmlns='http://www.w3.org/2000/svg' width='800' height='1000'>
+          <foreignObject width='100%' height='100%'>
+            <div xmlns='http://www.w3.org/1999/xhtml' style='font-family: Inter, Arial, sans-serif;'>
+              ${cardNode.outerHTML}
+            </div>
+          </foreignObject>
+        </svg>`;
+      const svgBlob = new Blob([serialized], {type:'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(svgBlob);
+      const img = new Image();
+      img.onload = function(){
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width * scale;
+        canvas.height = img.height * scale;
+        const ctx = canvas.getContext('2d');
+        ctx.scale(scale, scale);
+        ctx.drawImage(img, 0, 0);
+        URL.revokeObjectURL(url);
+        canvas.toBlob(function(blob){
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }, 'image/png');
+      };
+      img.src = url;
+    }
+
+    // download buttons: ensure names saved (if empty prompt)
+    downloadBtn.addEventListener('click', () => {
+      const toName = toInput.value.trim() || prompt('Tên người nhận:', toNameEl.textContent) || toNameEl.textContent;
+      const fromName = fromInput.value.trim() || prompt('Tên người gửi:', fromNameEl.textContent) || fromNameEl.textContent;
+      toInput.value = toName;
+      fromInput.value = fromName;
+      saveToName(toName);
+      saveFromName(fromName);
+      downloadCard(2, 'thiep-20-10-cho-ban.png');
+    });
+
+    downloadCardSmall.addEventListener('click', () => {
+      const toName = toInput.value.trim() || prompt('Tên người nhận:', toNameEl.textContent) || toNameEl.textContent;
+      const fromName = fromInput.value.trim() || prompt('Tên người gửi:', fromNameEl.textContent) || fromNameEl.textContent;
+      toInput.value = toName;
+      fromInput.value = fromName;
+      saveToName(toName);
+      saveFromName(fromName);
+      downloadCard(1, 'thiep-20-10-cho-ban-small.png');
+    });
+
+    printBtn.addEventListener('click', () => window.print());
+
+    // Confetti-heart animation
+    (function initHeartConfetti(){
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      let W,H, hearts=[];
+
+      function resize(){
+        W = canvas.width = card.clientWidth;
+        H = canvas.height = card.clientHeight;
+        // reposition existing hearts to fit
+        hearts.forEach(h => {
+          h.x = Math.random() * W;
+          h.y = Math.random() * -H;
+        });
+      }
+
+      function rand(min, max){ return min + Math.random() * (max - min); }
+
+      function makeHeart(){
+        return {
+          x: Math.random()*W,
+          y: Math.random()*-H,
+          size: rand(6, 14),
+          vx: rand(-0.6, 0.6),
+          vy: rand(0.6, 2),
+          rot: rand(0, Math.PI*2),
+          vrot: rand(-0.03, 0.03),
+          color: ['#ffb3c6','#ffd86b','#f7a1c0','#e75480'][Math.floor(Math.random()*4)]
+        };
+      }
+
+      function drawHeart(ctx, x, y, size, color, rot){
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.scale(size/20, size/20);
+        ctx.beginPath();
+        // heart path (classic bezier)
+        ctx.moveTo(0, -7);
+        ctx.bezierCurveTo(12, -25, 35, -5, 0, 20);
+        ctx.bezierCurveTo(-35, -5, -12, -25, 0, -7);
+        ctx.closePath();
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      function init(){
+        hearts = [];
+        for(let i=0;i<40;i++) hearts.push(makeHeart());
+      }
+
+      function update(){
+        for(const h of hearts){
+          h.y += h.vy;
+          h.x += h.vx;
+          h.rot += h.vrot;
+          // slight horizontal sway
+          h.x += Math.sin(h.y/30) * 0.3;
+          if(h.y > H + 20){
+            // recycle to top
+            h.x = Math.random()*W;
+            h.y = -10 - Math.random()*H;
+            h.vy = rand(0.6, 2);
+            h.vx = rand(-0.6, 0.6);
+            h.size = rand(6, 14);
+            h.rot = rand(0, Math.PI*2);
+            h.vrot = rand(-0.03, 0.03);
+            h.color = ['#ffb3c6','#ffd86b','#f7a1c0','#e75480'][Math.floor(Math.random()*4)];
+          }
+        }
+      }
+
+      function draw(){
+        ctx.clearRect(0,0,W,H);
+        for(const h of hearts){
+          drawHeart(ctx, h.x, h.y, h.size, h.color, h.rot);
+        }
+      }
+
+      function loop(){
+        update();
+        draw();
+        requestAnimationFrame(loop);
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+      init();
+      loop();
+    })();
+
+    // load saved names & set initial message on DOMContentLoaded
+    window.addEventListener('DOMContentLoaded', () => {
+      // load names
+      const savedTo = localStorage.getItem(LS_TO);
+      const savedFrom = localStorage.getItem(LS_FROM);
+      if (savedTo) { toInput.value = savedTo; toNameEl.textContent = savedTo; }
+      if (savedFrom) { fromInput.value = savedFrom; fromNameEl.textContent = savedFrom; }
+      // initial card message
+      cardMessage.textContent = messageEl.value.trim() || wishes[0];
+    });
+  </script>
+</body>
+</html>
